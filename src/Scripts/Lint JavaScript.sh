@@ -29,9 +29,9 @@ then
 		# use Github Actions ESLint config
 		# shellcheck disable=SC2089
 		ESLINTCONFIG="-c ${BB_DOC_WORKSPACE_ROOT}/.github/linters/eslint.config.js"
-		pushd "$BB_DOC_WORKSPACE_ROOT" > /dev/null 2>&1
+		cd "$BB_DOC_WORKSPACE_ROOT" > /dev/null 2>&1 || { echo "Unable to 'cd \"$BB_DOC_WORKSPACE_ROOT\"'" ; exit 1 ; }
 		npm install --no-save eslint eslint-plugin-n > /dev/null 2>&1
-		popd > /dev/null 2>&1
+		cd "$DIR" > /dev/null 2>&1 || { echo "Unable to 'cd \"$DIR\"'" ; exit 1 ; }
 	fi
 fi
 
