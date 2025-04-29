@@ -66,6 +66,9 @@ then
 		echo "RESPONSE ${RESPONSE}"
 		echo "CHARCOUNT $CHARCOUNT"
 		echo "RESULT $RESULT"
+		echo
+		echo "TIP: The message 'Error: Cannot find module …' typically means that an ESLint plugin is missing."
+		echo "     Try running 'npm install' for the project or installing the plugins globally."
 		hash terminal-notifier >/dev/null 2>&1 && \
 			(nohup terminal-notifier -title 'ERROR: BBEdit ESLint' -message "See \"Unix Shell Script.log\" for \"$BB_DOC_PATH\"" -sound sosumi >/dev/null 2>&1 &)
 		open -a BBEdit "$HOME/Library/Containers/com.barebones.bbedit/Data/Library/Logs/BBEdit/Unix Script Output.log" >/dev/null 2>&1
