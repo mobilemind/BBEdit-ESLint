@@ -38,7 +38,7 @@ fi
 # Run eslint in npm project (requires 'eslint-formatter-compact'
 # Install that manually with `npm install -D eslint-formatter-compact`
 # shellcheck disable=SC2086,SC2090
-RESPONSE="$("$(which eslint)" $ESLINTCONFIG --format compact "$BB_DOC_PATH")"
+RESPONSE="$("$(command -v eslint)" $ESLINTCONFIG --format compact "$BB_DOC_PATH")"
 
 CHARCOUNT="${#RESPONSE}"
 
