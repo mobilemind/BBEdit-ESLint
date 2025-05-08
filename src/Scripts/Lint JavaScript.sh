@@ -20,7 +20,7 @@ hash eslint > /dev/null 2>&1 || { echo "eslint not installed" ; exit 1 ; }
 
 # Run eslint in npm project (requires 'eslint-formatter-compact'
 # Install that manually with `npm install -D eslint-formatter-compact`
-RESPONSE=$("$(which eslint)" "$BB_DOC_PATH" --format compact)
+RESPONSE=$("$(command -v eslint)" "$BB_DOC_PATH" --format compact)
 
 CHARCOUNT="${#RESPONSE}"
 
